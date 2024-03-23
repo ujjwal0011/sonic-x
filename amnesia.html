@@ -1,0 +1,470 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SONIC X</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="media.css">
+    <style>
+        header .banner {
+    position: relative; /* Ensure proper positioning of elements */
+    width: 75%;
+    height: 90%;
+    display: none;
+    background: url('Amnesia/1.jpg');  
+    background-repeat: no-repeat;
+    background-size: cover;
+    overflow: hidden;
+}
+        header .song-side{
+    width: 75%;
+    height: 90%;
+    background: linear-gradient(360deg, #0b253ba7, #13132c84, #431d1df3, #6d1496f3);
+}
+        header .song-side .content .buttons button {
+    width: 130px;
+    height: 30px;
+    border: 2px solid #82afe285;
+    border-radius: 20px;
+    outline: none;
+    background: #82afe285;
+    color: #fff;
+    cursor: pointer;
+    transition: 0.3s linear;
+}
+
+header .song-side .content .buttons button:hover{
+    background: none;
+    color: #82afe285;
+}
+
+header .song-side .content .buttons button:nth-child(2){
+    background: none;
+    color: #82afe285;
+}
+
+header .song-side .content .buttons button:nth-child(2):hover{
+    background: #82afe285;
+    color: #fff;
+}
+header .song-side::before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 400px;
+    background: url('Amnesia/cover1.jpg');
+    z-index: -1;
+    opacity: 50%;
+    background-repeat: no-repeat;
+        }
+
+    header .song-side .content p {
+    
+    color: #82afe285;
+    font-weight: 400;
+    font-size: 13px;
+    margin-bottom: 20px;
+    margin-right: 2px;
+    font-weight: 600;
+}
+header .song-side .popular-songs .h4 {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 20px;
+}
+
+    </style>
+</head>
+<body>
+    <header>
+        <div class="menu-side">
+            <h6 id="menu-list-active-button"><i class="bi bi-music-note-list"></i></h6>
+            <h1>SONIC 𝕏</h1>
+            <div class="playlist">
+                <h4 class="plist active"><span></span><i class="bi bi-music-note-beamed"></i> Playlist</h4>
+                <h4 class="pic"><span></span><i class="bi bi-music-note-beamed"></i> Title Cards</h4>
+                <h4><span></span><i class="bi bi-music-note-beamed"></i> Recommended</h4>
+            </div>
+            <div class="menu-song">
+                <li class="songItem">
+                    <span>01</span>
+                    <img src="Amnesia/1.jpg" alt="">
+                    <h5>Flight - Man of Steel <br> <div class="subtitle">Hanz Zimmer</div></h5>
+                    <i class="bi playListPlay bi-play-circle-fill" id="1"></i>
+                </li>
+                <li class="songItem">
+                    <span>02</span>
+                    <img src="Amnesia/2.jpg" alt="">
+                    <h5>Cornfield Chase <br> <div class="subtitle">Hanz Zimmer</div></h5>
+                    <i class="bi playListPlay bi-play-circle-fill" id="2"></i>
+                </li>
+                <li class="songItem">
+                    <span>03</span>
+                    <img src="Amnesia/3.jpg" alt="">
+                    <h5>Goodbye - Dark <br> <div class="subtitle">Appart</div></h5>
+                    <i class="bi playListPlay bi-play-circle-fill" id="3"></i>
+                </li>
+                <li class="songItem">
+                    <span>04</span>
+                    <img src="Amnesia/4.jpg" alt="">
+                    <h5>Can You Hear The Music <br> <div class="subtitle">Ludwig Göransson</div></h5>
+                    <i class="bi playListPlay bi-play-circle-fill" id="4"></i>
+                </li>
+                <li class="songItem">
+                    <span>05</span>
+                    <img src="Amnesia/5.jpg" alt="">
+                    <h5>The Electro Suite <br> <div class="subtitle">Hanz Zimmer</div></h5>
+                    <i class="bi playListPlay bi-play-circle-fill" id="5"></i>
+                </li>
+                <li class="songItem">
+                    <span>06</span>
+                    <img src="Amnesia/6.jpg" alt="">
+                    <h5>Goblin - Amnesia<br> <div class="subtitle">Chanyeol</div></h5>
+                    <i class="bi playListPlay bi-play-circle-fill" id="6"></i>
+                </li>
+                <li class="songItem">
+                    <span>07</span>
+                    <img src="Amnesia/7.jpg" alt="">
+                    <h5>Together - Attack on Titan <br> <div class="subtitle">Hiroyuki Sawano</div></h5>
+                    <i class="bi playListPlay bi-play-circle-fill" id="7"></i>
+                </li>
+                <li class="songItem">
+                    <span>08</span>
+                    <img src="Amnesia/8.jpg" alt="">
+                    <h5>Loki Green Theme <br> <div class="subtitle">Natalie Holt</div></h5>
+                    <i class="bi playListPlay bi-play-circle-fill" id="8"></i>
+                </li>
+                <li class="songItem">
+                    <span>09</span>
+                    <img src="Amnesia/9.jpg" alt="">
+                    <h5>History Is Now <br> <div class="subtitle">Natalie Holt</div></h5>
+                    <i class="bi playListPlay bi-play-circle-fill" id="9"></i>
+                </li>
+                <li class="songItem">
+                    <span>10</span>
+                    <img src="Amnesia/10.jpg" alt="">
+                    <h5>Can't Fight City Halloween <br> <div class="subtitle">Michael Giacchino</div></h5>
+                    <i class="bi playListPlay bi-play-circle-fill" id="10"></i>
+                </li>
+                <li class="songItem">
+                    <span>11</span>
+                    <img src="Amnesia/11.jpg" alt="">
+                    <h5>Summon the Suit <br> <div class="subtitle">Hesham Nazih</div></h5>
+                    <i class="bi playListPlay bi-play-circle-fill" id="11"></i>
+                </li>
+                <li class="songItem">
+                    <span>12</span>
+                    <img src="Amnesia/12.jpg" alt="">
+                    <h5>Worm Ride <br> <div class="subtitle">Hanz Zimmer</div></h5>
+                    <i class="bi playListPlay bi-play-circle-fill" id="12"></i>
+                </li>
+                <li class="songItem">
+                    <span>13</span>
+                    <img src="Amnesia/13.jpg" alt="">
+                    <h5>Goth <br> <div class="subtitle">Sidewalks & Skeletons</div></h5>
+                    <i class="bi playListPlay bi-play-circle-fill" id="13"></i>
+                </li>
+            </div>
+        </div>
+        <div class="banner">
+            <div class="cover">
+                <img src="Amnesia/1.jpg" alt="" id="title_card">
+            </div>
+            <div class="detail">
+                <h1>Daylight</h1>
+                <h5>David Kushner</h5>
+            </div>
+        </div>
+        <div class="song-side">
+            <nav>
+                <ul>
+                    <li>Discover <span></span></li>
+                    <li>My Library</li>
+                    <li>Radio</li>
+                </ul>
+                <div class="search">
+                    <i class="bi bi-search"></i>
+                    <input type="text" name="" placeholder="Search Music" id="">
+                    <div class="search-results">
+                       
+                    </div>
+                </div>
+                <div class="user">
+                    <img src="Poster/1.jpg" alt="">
+                </div>
+            </nav>
+            <div class="content">
+                <h1>Amnesia</h1>
+                <p>Case it's fumes <br>
+                    She fill my mind up with ideas (straight up) <br>
+                    I'm the highest in the room (I'm the highest, it's lit) <br>
+                    Hope I make it outta here
+                    </p>
+                <div class="buttons">
+                    <button>Play</button>
+                    <button>Follow</button>
+                </div>
+            </div>
+            <div class="popular-songs">
+                <div class="h4">
+                    <h4>Popular Playlists</h4>
+                    <div class="btn-s">
+                        <i class="bi bi-arrow-left-short" id="pop-song-left"></i>
+                        <i class="bi bi-arrow-right-short" id="pop-song-right"></i>
+                    </div>
+                </div>
+                <div class="pop-song">
+                        <li class="songItemm">
+                            <a href="index.html">
+                            <div class="img-play">
+                                <img src="1.jpg" alt="">
+                                <i class="bi playListPlay bi-play-circle-fill" id=""></i>
+                            </div>
+                            <h5>Animal<br> <div class="subtitle">Harshavardhan R, Pritam</div></h5>
+                            </a>
+                            </li>
+
+                        <li class="songItemm">
+                            <a href="weekend.html">
+                        <div class="img-play">
+                            <img src="weekend.jpg" alt="">
+                            <i class="bi playListPlay bi-play-circle-fill" id=""></i>
+                        </div>
+                        <h5>The Weekend<br> <div class="subtitle">Weekend</div></h5>
+                        </a>
+                    </li>
+                    
+                    <li class="songItemm">
+                        <a href="anirudh.html">
+                    <div class="img-play">
+                        <img src="Anirudh/profile.jpg" alt="">
+                        <i class="bi playListPlay bi-play-circle-fill" id=""></i>
+                    </div>
+                    <h5>Anirudh's Best <br> <div class="subtitle">Anirudh Ravichander</div></h5>
+                </a>
+            </li>
+
+            <li class="songItemm">
+                <a href="moody.html">
+            <div class="img-play">
+                <img src="Moody/profile.jpg" alt="">
+                <i class="bi playListPlay bi-play-circle-fill" id=""></i>
+            </div>
+            <h5>Moody Mix <br> <div class="subtitle">David Kushner, Arctic Monkeys</div></h5>
+        </a>
+            </li>
+
+            <li class="songItemm">
+                <a href="new_music.html">
+            <div class="img-play">
+                <img src="New Music/profile.jpg" alt="">
+                <i class="bi playListPlay bi-play-circle-fill" id=""></i>
+            </div>
+            <h5>New Music Hindi <br> <div class="subtitle">Vishal Mishra, Anirudh Ravichander</div></h5>
+        </a>
+            </li>
+            
+            <li class="songItemm">
+                <a href="driving_vocals.html">
+            <div class="img-play">
+                <img src="Driving vocals/profile.jpg" alt="">
+                <i class="bi playListPlay bi-play-circle-fill" id=""></i>
+            </div>
+            <h5>Driving Vocals <br> <div class="subtitle">Interworld</div></h5>
+        </a>
+            </li>
+
+            <li class="songItemm">
+                <a href="moonlit_melodies.html">
+            <div class="img-play">
+                <img src="Moonlit Melodies/profile.jpg" alt="">
+                <i class="bi playListPlay bi-play-circle-fill" id=""></i>
+            </div>
+            <h5>Moonlit Melodies <br> <div class="subtitle">KK, Pritam</div></h5>
+        </a>
+            </li>
+
+            <li class="songItemm">
+                <a href="under_the_stars.html">
+            <div class="img-play">
+                <img src="Under The Stars/profile.jpg" alt="">
+                <i class="bi playListPlay bi-play-circle-fill" id=""></i>
+            </div>
+            <h5>Under The Stars <br> <div class="subtitle">KK, Pritam</div></h5>
+        </a>
+            </li>
+
+            <li class="songItemm">
+                <a href="on_the_verge.html">
+            <div class="img-play">
+                <img src="On the Verge/profile.jpg" alt="">
+                <i class="bi playListPlay bi-play-circle-fill" id=""></i>
+            </div>
+            <h5>On The Verge <br> <div class="subtitle">King GNU, Shiro Sagisu</div></h5>
+        </a>
+            </li>
+            
+            <li class="songItemm">
+                <a href="run_this_town.html">
+            <div class="img-play">
+                <img src="Run This Town/profile.jpg" alt="">
+                <i class="bi playListPlay bi-play-circle-fill" id=""></i>
+            </div>
+            <h5>Run This Town <br> <div class="subtitle">Travis Scott, Metro Boomin</div></h5>
+        </a>
+            </li>
+
+            <li class="songItemm">
+                <a href="amnesia.html">
+            <div class="img-play">
+                <img src="Amnesia/profile.jpg" alt="">
+                <i class="bi playListPlay bi-play-circle-fill" id=""></i>
+            </div>
+            <h5>Amnesia <br> <div class="subtitle">Hanz Zimmer, Michael Giacchino</div></h5>
+        </a>
+            </li>
+
+            <li class="songItemm">
+                <a href="hot_hits.html">
+            <div class="img-play">
+                <img src="Hot Hits/profile.jpg" alt="">
+                <i class="bi playListPlay bi-play-circle-fill" id=""></i>
+            </div>
+            <h5>Hot Hits <br> <div class="subtitle">Arijit Singh, Manan</div></h5>
+        </a>
+            </li>
+            
+            <li class="songItemm">
+                <a href="downtown_drive.html">
+            <div class="img-play">
+                <img src="Downtown Drive/profile.jpg" alt="">
+                <i class="bi playListPlay bi-play-circle-fill" id=""></i>
+            </div>
+            <h5>Downtown Drive <br> <div class="subtitle">Young Thug, Polo</div></h5>
+        </a>
+            </li>
+
+            <li class="songItemm">
+                <a href="lost_on_you.html">
+            <div class="img-play">
+                <img src="Lost On You/profile.jpg" alt="">
+                <i class="bi playListPlay bi-play-circle-fill" id=""></i>
+            </div>
+            <h5>Lost On You <br> <div class="subtitle">James Arthur, Mia</div></h5>
+        </a>
+            </li>
+                </div>
+            </div>
+            <div class="popular-artist">
+                <div class="h4">
+                    <h4>Popular Artists</h4>
+                    <div class="btn-s">
+                        <i class="bi bi-arrow-left-short" id="pop-artist-left"></i>
+                        <i class="bi bi-arrow-right-short" id="pop-artist-right"></i>
+                    </div>
+                </div>
+                <div class="item">
+                    <li>
+                        <img src="Artist/1.jpg" alt="">
+                    </li>
+                    <li>
+                        <img src="Artist/2.jpg" alt="">
+                    </li>
+                    <li>
+                        <img src="Artist/3.jpg" alt="">
+                    </li>
+                    <li>
+                        <img src="Artist/4.jpg" alt="">
+                    </li>
+                    <li>
+                        <img src="Artist/5.jpg" alt="">
+                    </li>
+                    <li>
+                        <img src="Artist/6.jpg" alt="">
+                    </li>
+                    <li>
+                        <img src="Artist/7.jpg" alt="">
+                    </li>
+                    <li>
+                        <img src="Artist/8.jpg" alt="">
+                    </li>
+                    <li>
+                        <img src="Artist/9.jpg" alt="">
+                    </li>
+                    <li>
+                        <img src="Artist/10.jpg" alt="">
+                    </li>
+                    <li>
+                        <img src="Artist/11.jpg" alt="">
+                    </li>
+                    <li>
+                        <img src="Artist/12.jpg" alt="">
+                    </li>
+                    <li>
+                        <img src="Artist/13.jpg" alt="">
+                    </li>
+                    <li>
+                        <img src="Artist/14.jpg" alt="">
+                    </li>
+                    <li>
+                        <img src="Artist/15.jpg" alt="">
+                    </li>
+                    <li>
+                        <img src="Artist/16.jpg" alt="">
+                    </li>
+                </div>
+            </div>
+        </div>
+        <div class="master-play">
+            <div class="wave" id="wave">
+                <div class="wave1"></div>
+                <div class="wave1"></div>
+                <div class="wave1"></div>
+            </div>
+            <img src="Amnesia/1.jpg" alt="" id="poster-master-play">
+            <h5 id="title">Flight - Man of Steel<br> <div class="subtitle">Hanz Zimmer</div></h5>
+            <div class="icons">
+               <i class="bi shuffle bi-music-note-beamed">next</i> 
+               <i class="bi bi-skip-start-fill" id="back"></i> 
+               <i class="bi bi-play-fill" id="play-btn"></i> 
+               <i class="bi bi-skip-end-fill" id="next"></i>
+               <a href="" download="" id="download-music"><i class="bi bi-download" ></i></a> 
+            </div>
+            <span id="current-start">00:00</span>
+            <div class="bar">
+                <input type="range" name="" id="seek" min="0" max="100">
+                <div class="bar2" id="bar2"></div>
+                <div class="dot"></div>
+            </div>
+            <span id="current-end">03:52</span>
+            <div class="vol">
+                <i class="bi bi-volume-up-fill" id="vol-icon"></i>
+                <input type="range" min="0" max="100" id="vol">
+                <div class="vol-bar"></div>
+                <div class="dot" id="vol-dot"></div>
+            </div>
+        </div>
+    </header>
+    <script src="amnesia.js">
+    </script>
+    <script>
+        let menu_list_active_button = document.getElementById("menu-list-active-button")
+        let menu_side = document.getElementsByClassName('menu-side')[0]
+            
+        menu_list_active_button.addEventListener("click", () => {
+            menu_side.style.transform = "unset";
+            menu_list_active_button.style.opacity = "0";
+        })
+
+        let song_side = document.getElementsByClassName('song-side')[0]
+
+        // song_side.addEventListener("click", () => {
+        //     menu_side.style.transform = "translateX(-100%)";
+        //     menu_list_active_button.style.opacity = "1";
+        // })
+    </script>
+</body>
+</html>
